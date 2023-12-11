@@ -33,6 +33,7 @@ const signup = async (req, res,next) => {
         console.log(user);
         const records = await pb.collection('user').create(user);
         console.log(records)
+
         req.session.user = user
         console.log(req.session.user)
         res.redirect('/login')
