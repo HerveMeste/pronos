@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+</head>
+<body>
+    <%- include('user') %>
+    <div class="w100 flex">
+
+        <h2>Matchs:</h2>
+    </div>
+
+    <form action="/matchs" method="POST">
+        <div class="w100">
+            <label for="team1">Team 1:</label>
+        </div>
+        <div class="w100">
+            <input type="text" name="team1" id="team1">
+        </div>
+        <div class="w100">
+            <label for="pseudo">Team 2 :</label>
+        </div>
+        <div class="w100">
+            <input type="text" name="team2" id="team2">
+        </div>
+        <div class="w100">
+            <input type="submit" value="ajouter un match">
+        </div>
+    </form>
+</body>
+</html>

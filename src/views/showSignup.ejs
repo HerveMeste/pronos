@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head') %>
+    <title><%= title %></title>
+</head>
+<body>
+    <div class="w100 flex">
+
+        <h2>Inscription:</h2>
+    </div>
+    <form action="/signup" method="POST">
+        <div class="w100">
+
+            <label for="email">E-mail:</label>
+        </div>
+        <div class="w100">
+
+            <input type="email" name="email" id="email">
+        </div>
+        <div class="w100">
+
+            <label for="username">Pseudo:</label>
+        </div>
+        <div class="w100">
+
+            <input type="text" name="username" id="username">
+        </div>
+        <div class="w100">
+
+            <label for="password">Password</label>
+        </div>
+        <div class="w100">
+
+            <input type="password" name="password" id="password">
+        </div>
+        <div class="w100">
+
+            <label for="passwordConfirm">Password (repeat):</label>
+        </div>
+        <div class="w100">
+
+            <input type="password" name="passwordConfirm" id="passwordConfirm">
+        </div>
+        <div class="w100">
+
+            <input type="submit" value="S'inscrire">
+        </div>
+    </form>
+    <div class="w100 flex">
+
+        <h3>Already have an account? please <a href="/login">login</a></h3>
+        <div class="w100">
+        </div>
+    </div>
+</body>
+</html>

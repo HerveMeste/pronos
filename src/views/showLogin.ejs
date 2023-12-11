@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('head') %>
+</head>
+
+<body>
+<div class="w100 flex">
+
+    <div class="w50 flex">
+        <div class="w100">
+
+            <h2>Login:</h2>
+        </div>
+        <form class="flex" action="/login" method="POST">
+            <div class="w100">
+                <label for="email" class="w50">E-mail:</label>
+            </div>
+            <div class="w100">
+                <input class="w100" type="email" name="email" id="email">
+            </div>
+            <div class="w100">
+                <label for="password" class="w50">Password:</label>
+            </div>
+            <div class="w100">
+                <input class="w100" type="password" name="password">
+            </div>
+            <div class="w100">
+
+                <input type="submit" value="Se connecter">
+            </div>
+        </form>
+        <h3>New? create <a href="/signup" class="signup">an account</a></h3>
+    </div>
+</div>
+</body>
+
+</html>
