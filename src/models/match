@@ -1,0 +1,41 @@
+// Importation des modules nécessaires
+const express = require('express');
+
+// Création de l'application Express
+const app = express();
+const port = 3000; // Port sur lequel le serveur écoutera
+
+// Route pour afficher les informations sur un match
+app.get('/match/:id', (req, res) => {
+    // Récupération de l'identifiant du match à partir des paramètres d'URL
+    const matchId = req.params.id;
+
+    // Simulation de données pour le match (remplacez cela par des données réelles)
+    const match = {
+        id: matchId,
+        teams: ['Équipe A', 'Équipe B'],
+        score: '3 - 1',
+        date: '2023-12-31',
+        venue: 'Stade XYZ',
+    };
+
+    // Affichage des informations sur le match
+    res.send(`
+        <h1>Match ${match.id}</h1>
+        <p>${match.teams[0]} vs ${match.teams[1]}</p>
+        <p>Résultat: ${match.score}</p>
+        <p>Date: ${match.date}</p>
+        <p>Lieu: ${match.venue}</p>
+        <a href="/">Retour à la page d'accueil</a>
+    `);
+});
+
+// Route pour la page d'accueil
+app.get('/', (req, res) => {
+    res.send('<h1>Bienvenue sur la page d\'accueil</h1>');
+});
+
+// Démarrage du serveur
+app.listen(port, () => {
+    console.log(`Le serveur écoute sur le port ${port}`);
+});
